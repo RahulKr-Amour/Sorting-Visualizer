@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="main">
+    <div id="main"> 
       <div id="navbar">
 
-        <div id="array_generate"">Generate New Array!</div>
-        <div id="array_size">Change Array Size</div>
+        <div id="gen"><button id="array_generate" class="generate">Generate New Array!</button></div>
+        <div id="array_size" class="arraysize">Change Array Size</div>
         <input id="a_size" type="range" min=20 max=200 step=1 value=80>
-        <div id="array_speed">Change Sorting Speed</div>
+        <div id="array_speed" class="arrayspeed">Change Sorting Speed</div>
         <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
 
         <div id="algos">
-          <div id="algo1" class="sortingAlgo">Selection Sort</div>
-          <div id="algo2" class="sortingAlgo">Bubble Sort</div>
-          <div id="algo3" class="sortingAlgo">Insertion Sort</div>
-          <div id="algo4" class="sortingAlgo">Merge Sort</div>
-          <div id="algo5" class="sortingAlgo">Quick Sort</div>
-          <div id="algo6" class="sortingAlgo">Heap Sort</div>
-          <div class="sort_button hide">Sort!</div>
-
+          <button id="algo1" class="sortingAlgo">Selection Sort</button>
+          <button id="algo2" class="sortingAlgo">Bubble Sort</button>
+          <button id="algo3" class="sortingAlgo">Insertion Sort</button>
+          <button id="algo4" class="sortingAlgo">Merge Sort</button>
+          <button id="algo5" class="sortingAlgo">Quick Sort</button>
+          <button id="algo6" class="sortingAlgo">Heap Sort</button>
+          <button id="sortbtn" class="sort_button hide">Sort!</button>
         </div>
       </div>
       <div id="array_container">

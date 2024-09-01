@@ -1,16 +1,9 @@
-/*
-    *****************
-    DONE BY:-   RAHUL KUMAR
-    
-    *****************
-*/
-
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none ; /* by doing this, on multiple clicking the element wont get selected to copy it,applying it to all*/
+    /* user-select: none ; by doing this, on multiple clicking the element wont get selected to copy it,applying it to all */
     font-family: monospace;
   }
   
@@ -27,35 +20,118 @@
   }
   
   #navbar {
-    height: 15%;
+    height: 15vh;
     width: 100%;
     background-color: #34495e;
     display: flex;
+    flex-wrap: wrap;
     color: white;
+/* (top bottom  left right) */
+    padding: 0 3%; 
+    position: relative;
   }
-  
+
   #algos {
     display: flex;
-    margin-top: 1.5%;
+    justify-content: center;
+    align-items: center;
     height: 50%;
     width: 60%;
+    gap: 2vw ;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
   }
-  
-  #array_generate {
-    height: 17%;
-    width: 12%;
-    margin-top: 2.7%;
-    margin-left: 0.8%;
-    margin-right: 0.5%;
+
+  .generate{
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 30px;
+  }
+
+  #gen{
+    margin-top: 2.4%;
+
+  }
+  .sortingAlgo {
+    margin-top: 2.4%;
     font-size: 16px;
   }
+  .sort_button {
+    margin-top: 2.4%;
+    margin-left: -2%;
+    font-size: 16px;
+  }
+
+  #algo1{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+  #algo2{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+  #algo3{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+  #algo4{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+  #algo5{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+  #algo6{
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+  #sortbtn{
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5vw 1vw;
+  }
+
+
+  #array_generate:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
   
+  #array_size:hover {
+    cursor: default;
+  }
+  
+  #array_speed:hover {
+    cursor: default;
+  }
+  
+  .sortingAlgo:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
   #array_size {
     height: 17%;
     width: 12%;
     margin-top: 2.1%;
     margin-right: 0.5%;
     font-size: 16px;
+    margin-left: 20px;
+    position: relative;
+    right: -5vmin;
   }
   
   #a_size {
@@ -68,6 +144,8 @@
     background: #fff;
     outline: none;
     border-radius: 4px;
+    position: relative;
+    left: 3.5vmin;
   }
   
   #a_size::-webkit-slider-thumb {
@@ -86,6 +164,8 @@
     margin-top: 2.1%;
     margin-left: 2%;
     font-size: 16px;
+    position: relative;
+    right: -5vmin;
   }
   
   #a_speed {
@@ -98,6 +178,8 @@
     background: white;
     outline: none;
     border-radius: 4px;
+    position: relative;
+    left: 2vmin;
   }
   
   #a_speed::-webkit-slider-thumb {
@@ -110,52 +192,6 @@
     cursor: pointer;
   }
   
-  .sortingAlgo {
-    height: 17%;
-    width: 50%;
-    margin-top: 2.4%;
-    font-size: 16px;
-  }
-  
-  .sort_button {
-    height: 17%;
-    width: 15%;
-    margin-top: 2.4%;
-    margin-left: -2%;
-    font-size: 16px;
-  }
-  
-  #algo2{
-    margin-left: 3%;
-  }
-  
-  #algo4{
-    margin-left: 3%;
-  }
-  
-  #algo5{
-    margin-left: -1%;
-  }
-  #algo6{
-    margin-left: -1%;
-  }
-  #array_generate:hover {
-    opacity: 70%;
-    cursor: pointer;
-  }
-  
-  #array_size:hover {
-    cursor: default;
-  }
-  
-  #array_speed:hover {
-    cursor: default;
-  }
-  
-  .sortingAlgo:hover {
-    opacity: 70%;
-    cursor: pointer;
-  }
   
   .sort_button:hover {
     opacity: 70%;
@@ -178,7 +214,7 @@
   }
   
   .butt_selected{
-     color: yellow;
+     color: rgb(0, 119, 255);
      cursor: pointer;
   }
   
@@ -195,137 +231,104 @@
   .inp_genDisable{
     pointer-events: none;
   }
-  
-  
+
   /* media query */
-  @media (max-width:500px){ /*mobiles*/
-     #navbar{
-      height: 11%;
-     }
-  
-     #array_generate {
-      display: inline-block;
-      width : 12%;
-      font-size: 10px;
-      /* white-space: nowrap; */
-      margin-left:0.3%;
-      margin-top: 2%;
-      margin-right: 2%;
+  @media (max-width:550px){ /*mobiles*/
+    #navbar{
+     height: 15vh;
     }
-    
+
+    .generate{
+      font-size: 3vw;
+      width: 20vw;
+    }
+
     #array_size{
-      display: inline-block;
-      font-size: 10px;
-      margin-top:2%;
-      margin-right: 6%;
+      font-size: 13px;
+      position: relative;
+      left: -1vw;
     }
-  
     #array_speed{
-      display: inline-block;
-      /* white-space: nowrap; */
-      width : 9%;
-      font-size: 10px;
-      margin-top:2%;
-      margin-right: 3%;
+      font-size: 13px;
+      position: relative;
+      left: 12vw;
     }
-  
-    #a_size {
-      -webkit-appearance: none;
-      height: 6%;
-      width: 9.5%;
-      margin-top: 11%;
-      margin-left: -18%;
-      margin-right: 2%;
-      background: #fff;
-      outline: none;
-      border-radius: 4px;
+
+    #a_size{
+      position: relative;
+      left: 10vw;
+      width: 20%;
+      top: 3.5vw;
     }
-    
-    #a_size::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 8.5px;
-      height: 8.5px;
-      border-radius: 50%;
-      background: magenta;
-      cursor: pointer;
+
+    #a_speed{
+      position: relative;
+      left: 27vw;
+      top: 3.5vw;
+      width: 20%;
     }
-    
-    #a_speed {
-      -webkit-appearance: none;
-      height: 6%;
-      width: 9.5%;
-      margin-top: 11%;
-      margin-left: -12%;
-      margin-right:5%; 
-      background: white;
-      outline: none;
-      border-radius: 4px;
+
+    #algos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      width: 60%;
+      gap: 2vw ;
+      margin-left: 19vw;
+      margin-top: 5vw;
+      margin-bottom: 1vw;
     }
-    
-    #a_speed::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 8.5px;
-      height: 8.5px;
-      border-radius: 50%;
-      background: magenta;
-      cursor: pointer;
-    }
-     
-    #algos{
-       margin-left:-1%;
-    }
-    
-    .sortingAlgo{
-      height: 25%;
-      font-size: 10px;
-    }
-    .sort_button{
-      display: inline-block;
-      font-size: 10px;
-      margin-top:8%;
-      margin-left: -5%;
-    }
-  
+
     #algo1{
-      display: inline-block;
-      width: 40%;
-      margin-right: 10%;
-      margin-top:3%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
+  
     #algo2{
-      margin-top:14%;
-      width: 40%;
-      margin-left:-38%;
-      margin-right: 3%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
+  
     #algo3{
-      display: inline-block;
-      width: 40%;
-      margin-right: 1%;
-      margin-top:3%;
-      margin-left:-8%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
     #algo4{
-      margin-top:14%;
-      width: 40%;
-      margin-left:-31%;
-      margin-right: 3%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
+  
     #algo5{
-      display: inline-block;
-      width: 25%;
-      margin-right: 0%;
-      margin-left:-8%;
-      margin-top:3%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
+  
     #algo6{
-      margin-top:14%;
-      width: 40%;
-      margin-left:-20%;
-      margin-right: 0%;
+      border: none;
+      font-size: 3vw;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
     }
+  
+    #sortbtn{
+      color: black;
+      border: none;
+      font-size: 2.7vw;
+      border-radius: 10px;
+      padding: .5vw 1vw;
+    }
+
     #array_container {
       display: flex;
       width: 95%;
@@ -335,152 +338,7 @@
       /* background-color: red; */
       align-items: flex-end;
     }
+
+
   }
   
-  @media (min-width: 780px) and (max-width: 1100px) {
-    #navbar{
-      height: 14%;
-    }
-    #array_generate{
-      font-size: 13px;
-      margin-top:2%;
-    }
-    #array_size{
-      font-size: 13px;
-    }
-    #array_speed{
-      font-size: 13px;
-      margin-right: 2%;
-    }
-  
-    #a_size {
-      width: 8%;
-      margin-top: 5.8%;
-      margin-left: -12%;
-      margin-right: 3%;
-    }
-    
-    #a_size::-webkit-slider-thumb {
-      width: 8.5px;
-      height: 8.5px;
-    }
-    
-    #a_speed {
-      width: 8%;
-      margin-top: 5.8%;
-      margin-left:-13%
-    }
-    
-    #a_speed::-webkit-slider-thumb {
-      width: 8.5px;
-      height: 8.5px;
-    }
-  
-    .sortingAlgo{
-      font-size: 13px;
-      margin-top: 2%;
-    }
-  
-    .sort_button{
-      margin-top: 3%;
-      font-size: 13px;
-    }
-  
-    #algo2{
-      margin-right: 2%;
-    }
-    #algo4{
-      margin-right: 3%;
-    }
-    #algo5{
-      margin-right: 4%;
-    }
-    #algo6{
-      margin-right:6%;
-    }
-    #array_container{
-      margin-top:3%;
-      width: 75%;
-      margin-left: 12%;
-    }
-  
-  }
-  
-  @media (min-width: 1191px) and (max-width: 1400px) {
-    #navbar{
-      height: 14%;
-    }
-    #array_generate{
-      font-size: 13px;
-      margin-top:2%;
-    }
-    #array_size{
-      font-size: 13px;
-    }
-    #array_speed{
-      font-size: 13px;
-      margin-right: 2%;
-    }
-  
-    #a_size {
-      width: 8%;
-      margin-top: 4%;
-      margin-left: -12%;
-      margin-right: 3%;
-    }
-    
-    #a_size::-webkit-slider-thumb {
-      width: 9px;
-      height: 9px;
-    }
-    
-    #a_speed {
-      width: 8%;
-      margin-top: 4%;
-      margin-left:-13%
-    }
-    
-    #a_speed::-webkit-slider-thumb {
-      width: 9px;
-      height: 9px;
-    }
-  
-    .sortingAlgo{
-      font-size: 13px;
-      margin-top: 2%;
-    }
-  
-    .sort_button{
-      margin-top: 2%;
-      font-size: 13px;
-    }
-  
-    #algo2{
-      margin-right: 2%;
-    }
-    #algo4{
-      margin-right: 3%;
-    }
-    #algo5{
-      margin-right: 4%;
-    }
-    #algo6{
-      margin-right:6%;
-    }
-    #array_container{
-      margin-top:3%;
-      width: 75%;
-      margin-left: 12%;
-    }
-  
-  }
-    
-  
-  
-  
-  /*
-      *****************
-      DONE BY:-   RAHUL KUMAR
-      
-      *****************
-  */
