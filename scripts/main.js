@@ -5,6 +5,7 @@
     *****************
 */
 
+
 /* array speed,size,generate ko bhi buttlocked krna hai*/
 
 //Variables (BE CAREFUL THESE MIGHT BE USED IN OTHER JS FILES TOO)
